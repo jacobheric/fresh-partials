@@ -1,5 +1,6 @@
 import { useSignal } from "@preact/signals";
 import Counter from "../islands/Counter.tsx";
+import { Partial } from "$fresh/runtime.ts";
 
 export default function Home() {
   const count = useSignal(3);
@@ -23,6 +24,8 @@ export default function Home() {
       <div className="max-w-screen-md mx-auto flex flex-col items-center justify-center">
         <a className="mt-2" href="/test" f-partial="/partials/test">test a partial</a>
       </div>
+      <Partial name="test-content" />
+
     </div>
   );
 }

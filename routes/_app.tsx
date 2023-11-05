@@ -1,5 +1,4 @@
 import { AppProps } from "$fresh/server.ts";
-import { Partial } from "$fresh/runtime.ts";
 
 export default function App({ Component }: AppProps) {
   return (
@@ -10,9 +9,7 @@ export default function App({ Component }: AppProps) {
         <title>deno-fresh</title>
       </head>
       <body f-client-nav>
-      <Partial name="body">
         <Component />
-      </Partial>
       </body>
     </html>
   );
